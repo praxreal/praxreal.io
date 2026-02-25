@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Clean Campaign 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<div class="logo-container">
+    <img src="https://scontent.fbkk5-4.fna.fbcdn.net/v/t1.6435-9/93852220_105994881083039_8961541080914853888_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeE_Yf2dn05zBZxaRkPO8D0Rhe-hqTyjb9GF76GpPKNv0WOjGoQhOQPrDQhh4YwHbrBctPNTkrPuxOlp1vmL46W6&_nc_ohc=RoCdvnJA5KYQ7kNvwFPsU9b&_nc_oc=AdksLwb8LaWeWAiJyXUvkUvsCBjFx0mtg0GBrhVNuyxidO8sbSo5kv6GmjFEMSTUoHjx0w-RVMx4vf6CAbdiIw9a&_nc_zt=23&_nc_ht=scontent.fbkk5-4.fna&_nc_gid=VuLRVyo59MiDWnP6lu37zA&oh=00_AfuOZWEPVVXw9JQ5tRMWGAfJYhaJNgTP7LLqu74b4uYxEg&oe=69C1E3A9" alt="School Logo">
+</div>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Prompt',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f0f1a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Gradient Background */
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:radial-gradient(circle at 20% 30%, #8e24aa, transparent 40%),
+               radial-gradient(circle at 80% 70%, #6a1b9a, transparent 40%);
+    animation:moveBg 10s infinite alternate;
+    z-index:-1;
+}
+
+@keyframes moveBg{
+    from{transform:translate(0,0);}
+    to{transform:translate(-100px,-50px);}
+}
+.logo-container{
+    background:#6a1b9a;
+    text-align:center;
+    padding:15px;
+}
+
+.logo-container img{
+    height:80px;
+}
+/* Hero Section */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:65px;
+    font-weight:800;
+    background:linear-gradient(90deg,#e1bee7,#ffffff,#ce93d8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{text-shadow:0 0 10px #8e24aa;}
+    to{text-shadow:0 0 30px #e1bee7;}
+}
+
+.hero p{
+    margin-top:25px;
+    font-size:22px;
+    max-width:800px;
+}
+
+.btn{
+    margin-top:40px;
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:600;
+    background:linear-gradient(90deg,#8e24aa,#6a1b9a);
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px #8e24aa;
+}
+
+/* Section */
+section{
+    padding:100px 20px;
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+}
+
+section h2{
+    font-size:45px;
+    margin-bottom:50px;
+    background:linear-gradient(90deg,#e1bee7,#ffffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:40px 25px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    transition:0.3s;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover{
+    transform:translateY(-15px);
+    box-shadow:0 0 30px #8e24aa;
+}
+
+.card h3{
+    font-size:22px;
+    margin-bottom:15px;
+    color:#e1bee7;
+}
+
+/* Big Quote */
+.quote{
+    font-size:30px;
+    font-weight:700;
+    margin-top:60px;
+    color:#ce93d8;
+}
+
+/* Footer */
+footer{
+    background:#111;
+    padding:50px 20px;
+    text-align:center;
+    margin-top:100px;
+}
+
+footer h3{
+    margin-bottom:20px;
+    color:#ce93d8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <h1>💜 SCHOOL CLEAN CAMPAIGN 💜</h1>
+    <p>
+        โรงเรียนสะอาด ไม่ได้เกิดจากภารโรงคนเดียว  
+        แต่มันเกิดจาก “พวกเราทุกคน”  
+        ถึงเวลาลุกขึ้นมาสร้างโรงเรียนในแบบที่เราภูมิใจ
+    </p>
+    <button class="btn" onclick="scrollToSection()">เริ่มเปลี่ยนแปลงตอนนี้</button>
+</div>
+
+<section id="reason">
+    <h2>ทำไมเราต้องช่วยกัน?</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>สุขภาพต้องมาก่อน</h3>
+            <p>ลดเชื้อโรค ฝุ่น และสิ่งสกปรก เพื่อโรงเรียนที่ปลอดภัย</p>
+        </div>
+        <div class="card">
+            <h3>สร้างภาพลักษณ์</h3>
+            <p>โรงเรียนสะอาด คือความภูมิใจของนักเรียนทุกคน</p>
+        </div>
+        <div class="card">
+            <h3>วินัยและความรับผิดชอบ</h3>
+            <p>เริ่มจากเก็บขยะชิ้นเล็ก ๆ สู่ความรับผิดชอบที่ยิ่งใหญ่</p>
+        </div>
+        <div class="card">
+            <h3>พลังของความร่วมมือ</h3>
+            <p>เมื่อทุกคนช่วยกัน โรงเรียนจะเปลี่ยนไปทันที</p>
+        </div>
+    </div>
+
+    <div class="quote">
+        “โรงเรียนสะอาด เพราะพวกเราช่วยกัน”
+    </div>
+</section>
+
+<section>
+    <h2>เราทำอะไรได้บ้าง?</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>ทิ้งขยะให้ถูกที่</h3>
+            <p>เรื่องเล็ก ๆ ที่สร้างผลลัพธ์ใหญ่</p>
+        </div>
+        <div class="card">
+            <h3>แยกขยะ</h3>
+            <p>ช่วยลดปริมาณขยะและรักษาสิ่งแวดล้อม</p>
+        </div>
+        <div class="card">
+            <h3>ช่วยกันเก็บ</h3>
+            <p>เห็นขยะ อย่าเดินผ่าน</p>
+        </div>
+        <div class="card">
+            <h3>เป็นตัวอย่างที่ดี</h3>
+            <p>เริ่มจากตัวเรา แล้วคนอื่นจะตามมา</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <h3>ผู้จัดทำโครงการ</h3>
+    <p>นายกฤติน กาวถิ่นภู เลขที่ 3 ม.4/2</p>
+    <p>นายณัฐพัชร์ อิ่มพรหม เลขที่ 10 ม.4/2</p>
+    <p>นายพิชญางกูร มากุญชร เลขที่ 12 ม.4/2</p>
+    <p>นางสาวจิณณ์พัชร ฉิมกรด เลขที่ 21 ม.4/2</p>
+    <p>นางสาวพริมา ศรีโยธี เลขที่ 22 ม.4/2</p>
+    <br>
+    <p>ครูที่ปรึกษา: ครูเสาวลักษณ์ ภิรมย์วัฒนา</p>
+    <br>
+    <p>© 2026 School Clean Campaign</p>
+</footer>
+
+<script>
+function scrollToSection(){
+    document.getElementById("reason").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
